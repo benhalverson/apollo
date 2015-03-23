@@ -9,7 +9,7 @@ html
     link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
-  body
+  body(ng-app='dailyjobsapp')
 .container
   .header.clearfix
     nav
@@ -22,7 +22,7 @@ html
       //    a(href='#') Contact
     h3.text-muted Daily.Jobs
     .row
-      .col-lg-12
+      .col-sm-12.col-md-offset-2
         .text-center
         form(name="input")
         input(type="text", name="search", placeholder="Job Title or Keyword")
@@ -57,7 +57,7 @@ html
     .row
       .col-sm-6
         .ul
-          .li Title 1
+          .li {{job.title}}
             .ul
               .li icons go here
           .li Title 2
@@ -86,3 +86,7 @@ html
     script(src=isProd ? '/index.min.js' : '/index.js')
     script(src=isProd ? '/vendor/jquery/dist/jquery.min.js' : '/vendor/jquery/dist/jquery.js')
     script(src=isProd ? '/vendor/bootstrap/dist/js/bootstrap.min.js' : '/vendor/bootstrap/dist/js/bootstrap.js')
+    script(src=isProd ? '/vendor/angular/angular.min.js' : '/vendor/angular/angular.js')
+    script(src=isProd ? '/vendor/angular-route/angular-route.min.js' : '/vendor/angular-route/angular-route.js')
+    script(src=isProd ? '/assets/scripts/app.min.js' : '/assets/scripts/app.js')
+    script(src=isProd ? '/assets/scripts/controllers/main.min.js' : '/assets/scripts/controllers/main.js')

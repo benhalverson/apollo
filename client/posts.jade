@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Apollo
+    link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href=isProd ? '/posts.min.css' : '/posts.css')
+    link(rel='shortcut icon', href='/favicon.ico')
+  body(ng-app='dailyjobsapp')
+.container
+  .header.clearfix
+    nav
+      //ul.nav.nav-pills.pull-right
+      //  li.active(role='presentation')
+      //    a(href='#') Home
+      //  li(role='presentation')
+      //    a(href='#') About
+      //  li(role='presentation')
+      //    a(href='#') Contact
+    h3.text-muted Daily.Jobs
+    .row
+      .col-sm-12.col-md-offset-2
+        p Testing
+        {{job.title}}
