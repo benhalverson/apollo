@@ -13,44 +13,53 @@ html
 .container
   .header.clearfix
     nav
-      ul.nav.nav-pills.pull-right
-        li.active(role='presentation')
-          a(href='#') Home
-        li(role='presentation')
-          a(href='#') About
-        li(role='presentation')
-          a(href='#') Contact
-    h3.text-muted Project name
-  .jumbotron
+      //ul.nav.nav-pills.pull-right
+      //  li.active(role='presentation')
+      //    a(href='#') Home
+      //  li(role='presentation')
+      //    a(href='#') About
+      //  li(role='presentation')
+      //    a(href='#') Contact
+    h3.text-muted Daily.Jobs
     .row
-      .col-md-6
-        h1 Apollo
-        img#apollo(src='/assets/apollo.jpg')
-        p
-          a.btn.btn-lg.btn-success(href='#', role='button') Sign up today
-      .col-md-6
-        p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-  .row.marketing
-    .col-lg-6
-      h4 Subheading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-      h4 Subheading
-      p
-        | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-      h4 Subheading
-      p Maecenas sed diam eget risus varius blandit sit amet non magna.
-    .col-lg-6
-      h4 Subheading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-      h4 Subheading
-      p
-        | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-      h4 Subheading
-      p Maecenas sed diam eget risus varius blandit sit amet non magna.
+      .col-lg-12
+        .text-center
+        form(name="input")
+        input(type="text", name="search", placeholder="Job Title or Keyword")
+        select
+          option Job Type
+          option Full Time
+          option Contract
+          option Part Time
+          option Internship
+          option Temporary
+        select
+          option Salary
+          option 30k
+          option 40k
+          option 50k
+          option 60k
+          option 70k
+          option 80k
+          option 90k
+          option 100k
+        input(type="text", name="location", placeholder="Location (City, State, Zip)")
+        select
+          option miles
+          option 5
+          option 10
+          option 15
+          option 25
+          option 50
+          option 100
+        input(type="submit", value="Submit")
+        //| <i class="fa fa-refresh fa-spin"></i>
+
+
+
+
   footer.footer
-    p &copy; Company 2015
+    p &copy; Daily.Jobs 2015
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
     script(src=isProd ? '/vendor/jquery/dist/jquery.min.js' : '/vendor/jquery/dist/jquery.js')
